@@ -16,9 +16,9 @@ This is a **static** (no build tools) multi-page website:
 
 ## WhatsApp click-to-chat number
 
-The WhatsApp links currently use a **placeholder** number: `255700000000`.
+The WhatsApp links currently use: `255769994654`.
 
-Search/replace across the project for `255700000000` and replace with your real WhatsApp number in **international format (digits only, no +)**.
+If you need to change it later, search/replace across the project for `255769994654` and replace with your real WhatsApp number in **international format (digits only, no +)**.
 
 Files include:
 
