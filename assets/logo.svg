@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Mavuno Water Solutions logo">
+  <defs>
+    <clipPath id="dropClip">
+      <path d="M32 6c8.5 12.5 16 20.2 16 29.2C48 45.6 41.1 52 32 52S16 45.6 16 35.2C16 26.2 23.5 18.5 32 6z"/>
+    </clipPath>
+  </defs>
+  <!-- Outer gold ring -->
+  <circle cx="32" cy="32" r="30" fill="#0F4C2A" stroke="#C8860A" stroke-width="3"/>
+  <!-- Inner dark green disc -->
+  <circle cx="32" cy="32" r="26" fill="#0F4C2A"/>
+  <!-- Water drop + plant -->
+  <g clip-path="url(#dropClip)" transform="translate(0,0)">
+    <path d="M32 6c8.5 12.5 16 20.2 16 29.2C48 45.6 41.1 52 32 52S16 45.6 16 35.2C16 26.2 23.5 18.5 32 6z" fill="#C8EEDA"/>
+    <!-- Plant -->
+    <path d="M32 40c-2.2-4.6-6-7.2-10-8.2 1.8 3.8 4.8 6.6 10 8.2z" fill="#1D7A4A"/>
+    <path d="M32 40c2.2-4.6 6-7.2 10-8.2-1.8 3.8-4.8 6.6-10 8.2z" fill="#2EAD6B"/>
+    <path d="M32 40v10" stroke="#0F4C2A" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Waves -->
+    <path d="M14 46c4 2 8 2 12 0s8-2 12 0 8 2 12 0" fill="none" stroke="#1D7A4A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M16 50c3.5 1.6 7.2 1.6 10.5 0 3.3-1.6 7-1.6 10.5 0" fill="none" stroke="#2EAD6B" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

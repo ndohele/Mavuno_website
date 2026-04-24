@@ -1,0 +1,10 @@
+# Vercel
+.vercel/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Accidental local files
+Untitled-1.py
+

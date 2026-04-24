@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact Mavuno Water Solutions — Kishinda Village, Sengerema District, Mwanza Region." />
+    <title>Contact — Mavuno Water Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Mavuno Water Solutions home">
+          <img src="assets/logo.svg" width="44" height="44" alt="" />
+          <span>Mavuno Water Solutions</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Open menu</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+          </svg>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="impact.html">Impact</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a class="is-active" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section bg-offwhite">
+        <div class="container stack">
+          <div>
+            <p class="kicker">Contact</p>
+            <h1 class="page-title">Let’s talk — farmer to farmer, partner to partner</h1>
+            <p class="lead muted">
+              Send a message and we’ll respond as soon as we’re back from the field. For quick questions, WhatsApp works great too.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-mint">
+        <div class="container grid grid--split">
+          <div class="stack">
+            <h2 class="page-title" style="margin: 0">Send a message</h2>
+            <p class="muted" style="margin: 0">
+              This form opens your email app with your message pre-filled (no server required).
+            </p>
+
+            <form id="contact-form" class="form" method="post" action="#">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+
+              <div>
+                <label for="contact">Email or phone</label>
+                <input id="contact" name="contact" autocomplete="email" required />
+              </div>
+
+              <div>
+                <label for="persona">I am a…</label>
+                <select id="persona" name="persona" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option value="Farmer">Farmer</option>
+                  <option value="Funder/Investor">Funder/Investor</option>
+                  <option value="NGO/Partner">NGO/Partner</option>
+                  <option value="Volunteer">Volunteer</option>
+                  <option value="Journalist">Journalist</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <div>
+                <button class="btn btn--primary" type="submit">Send message</button>
+                <p class="form-note" style="margin-top: 10px">
+                  Prefer email? <a href="mailto:mavunowaters@gmail.com">mavunowaters@gmail.com</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <aside class="stack" aria-label="Contact details">
+            <div class="card">
+              <h2 class="page-title" style="font-size: 1.2rem; margin-top: 0">Contact details</h2>
+              <p class="muted" style="margin: 0">
+                <strong>Email:</strong>
+                <a href="mailto:mavunowaters@gmail.com">mavunowaters@gmail.com</a><br />
+                <strong>Instagram:</strong>
+                <a href="https://instagram.com/mavunowaters">@mavunowaters</a><br />
+                <strong>Location:</strong> Kishinda Village, Sengerema District, Mwanza Region, Tanzania
+              </p>
+            </div>
+
+            <div class="map" aria-label="Map of Sengerema District area">
+              <iframe
+                title="OpenStreetMap embed — Sengerema District, Mwanza Region, Tanzania"
+                loading="lazy"
+                height="360"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=32.15%2C-2.75%2C32.65%2C-2.35&amp;layer=mapnik"
+              ></iframe>
+              <div style="padding: 10px 12px; background: #fff">
+                <a
+                  class="small"
+                  href="https://www.openstreetmap.org/?mlat=-2.55&amp;mlon=32.40#map=10/-2.55/32.40"
+                  >View larger map</a
+                >
+                <span class="small muted"> — approximate area around Sengerema District</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="color: #fff">
+            <img src="assets/logo.svg" width="44" height="44" alt="" />
+            <span>Mavuno Water Solutions</span>
+          </div>
+          <p style="margin: 12px 0 0; color: rgba(255,255,255,0.9)">
+            <strong>We come to you — reliable water, thriving farms</strong>
+          </p>
+          <p class="small" style="margin: 10px 0 0; color: rgba(255,255,255,0.85)">
+            Irrigation · Drainage · Education · Technical Support
+          </p>
+        </div>
+
+        <div class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="impact.html">Impact</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="container footer-meta">
+        <div class="social" aria-label="Social links">
+          <a href="https://instagram.com/mavunowaters" aria-label="Instagram (@mavunowaters)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zM17.5 6.7a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"
+              />
+            </svg>
+          </a>
+          <a href="https://wa.me/255700000000" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.5 3.5A10 10 0 0 0 4.7 18.3L3 21l2.8-.7A10 10 0 1 0 20.5 3.5zm-9.4 14.6c-.8 0-1.6-.1-2.3-.4l-2.6.7.7-2.5c-.3-.8-.5-1.7-.5-2.6 0-3.2 2.6-5.8 5.8-5.8 1.6 0 3 .6 4.1 1.7a5.8 5.8 0 0 1 1.7 4.1c0 3.2-2.6 5.8-5.8 5.8z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div>© <span id="y"></span> Mavuno Water Solutions</div>
+      </div>
+    </footer>
+
+    <a class="wa-fab" href="https://wa.me/255700000000" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20.5 3.5A10 10 0 0 0 4.7 18.3L3 21l2.8-.7A10 10 0 1 0 20.5 3.5zm-9.4 14.6c-.8 0-1.6-.1-2.3-.4l-2.6.7.7-2.5c-.3-.8-.5-1.7-.5-2.6 0-3.2 2.6-5.8 5.8-5.8 1.6 0 3 .6 4.1 1.7a5.8 5.8 0 0 1 1.7 4.1c0 3.2-2.6 5.8-5.8 5.8z"
+        />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <script>
+      document.getElementById("y").textContent = String(new Date().getFullYear());
+    </script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
