@@ -55,7 +55,7 @@ export default function Solutions() {
       <section className={styles.hero}>
         <div className="container">
           <span className="section-label">What we offer</span>
-          <h1>Four integrated services — all delivered to your village</h1>
+          <h1>Four integrated services all delivered to your farm field</h1>
           <p>
             Everything designed for smallholder realities: seasonal income, shared equipment,
             and learning in field — not classroom.
@@ -104,7 +104,7 @@ export default function Solutions() {
           <p>
             Harvests are seasonal. Cash is tight before them and better after.
             We offer renting, leasing, after-harvest arrangements, and group options
-            for cooperatives — so getting water access does not mean going into debt.
+            for cooperatives so getting water access does not mean going into debt.
             Talk to us and we will find an arrangement that fits your situation.
           </p>
           <Link to="/contact" className={`btn btn-outline ${styles.payBtn}`}>Ask about payment options</Link>
@@ -114,7 +114,7 @@ export default function Solutions() {
       <section className={styles.ctaBanner}>
         <div className="container">
           <h2>Ready to get started?</h2>
-          <p>We'll come to your village and assess your needs — no commitment required.</p>
+          <p>We'll come to your village and assess your needs no commitment required.</p>
           <Link to="/contact" className="btn btn-gold">Talk to us</Link>
         </div>
       </section>
