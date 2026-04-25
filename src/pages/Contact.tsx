@@ -17,7 +17,7 @@ const PERSONA_MAP: Record<string, string> = {
 
 const PERSONAS = ['Farmer', 'Funder/Investor', 'NGO/Partner', 'Volunteer', 'Journalist', 'Other']
 
-type Status = 'idle' | 'sent' | 'no-client'
+type Status = 'idle' | 'sending' | 'sent' | 'error'
 
 export default function Contact() {
   const [params] = useSearchParams()
@@ -31,36 +31,37 @@ export default function Contact() {
     if (mapped && selectRef.current) selectRef.current.value = mapped
   }, [params])
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const fd = new FormData(e.currentTarget)
+    setStatus('sending')
+    const fd = new FormData(e.target)
     const name = fd.get('name') as string
     const contact = fd.get('contact') as string
     const persona = fd.get('persona') as string
     const message = fd.get('message') as string
 
-    const subject = encodeURIComponent(`[Mavuno] Message from ${name} (${persona})`)
-    const body = encodeURIComponent(
-      `Name: ${name}\nContact: ${contact}\nI am a: ${persona}\n\nMessage:\n${message}`
-    )
-    const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
-
-    // Detect whether an email client opened by checking if the page loses focus
-    let clientOpened = false
-    const onBlur = () => { clientOpened = true }
-    window.addEventListener('blur', onBlur)
-
-    window.location.href = mailto
-
-    setTimeout(() => {
-      window.removeEventListener('blur', onBlur)
-      if (clientOpened) {
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          name,
+          email: contact,
+          subject: `[Mavuno] Message from ${name} (${persona})`,
+          message: `Name: ${name}\nContact: ${contact}\nI am a: ${persona}\n\nMessage:\n${message}`,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
         setStatus('sent')
         formRef.current?.reset()
       } else {
-        setStatus('no-client')
+        setStatus('error')
       }
-    }, 600)
+    } catch {
+      setStatus('error')
+    }
   }
 
   const pageTitle = `Contact — ${SITE_NAME}`
@@ -94,13 +95,13 @@ export default function Contact() {
             {status === 'sent' && (
               <div className={styles.successBanner}>
                 <CheckCircle size={18} strokeWidth={2} />
-                <span>Message opened in your email client — we'll get back to you soon.</span>
+                <span>Message sent! We'll get back to you soon.</span>
               </div>
             )}
 
-            {status === 'no-client' && (
-              <div className={styles.fallbackBanner}>
-                <p>No email app found. You can reach us directly:</p>
+            {status === 'error' && (
+              <div className={styles.errorBanner}>
+                <p>Something went wrong — please try again or reach us directly:</p>
                 <div className={styles.fallbackActions}>
                   <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-outline">
                     <Mail size={15} /> Email us
@@ -113,7 +114,7 @@ export default function Contact() {
               </div>
             )}
 
-            {status === 'idle' && (
+            {(status === 'idle' || status === 'sending') && (
               <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.field}>
                   <label htmlFor="name">Your name</label>
@@ -134,7 +135,9 @@ export default function Contact() {
                   <label htmlFor="message">Message</label>
                   <textarea id="message" name="message" required rows={5} placeholder="Tell us what you're working on or what you need…" />
                 </div>
-                <button type="submit" className="btn btn-primary">Send message</button>
+                <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Send message'}
+                </button>
               </form>
             )}
           </div>

@@ -31,16 +31,16 @@
   font-weight: 500;
 }
 
-.fallbackBanner {
+.errorBanner {
   padding: 1.25rem 1.5rem;
-  background: var(--gold-light);
-  border: 1.5px solid var(--gold);
+  background: #fff5f5;
+  border: 1.5px solid #f87171;
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
-.fallbackBanner p { font-size: 0.9rem; color: var(--ink); font-weight: 500; }
+.errorBanner p { font-size: 0.9rem; color: var(--ink); font-weight: 500; }
 .fallbackActions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .retryLink {
   background: none;
