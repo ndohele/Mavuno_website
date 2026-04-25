@@ -79,7 +79,7 @@ export default function Solutions() {
         </div>
       </section>
 
-      <section className={styles.process}>
+      {/* <section className={styles.process}>
         <div className="container">
           <span className="section-label">How it works</span>
           <h2>Our 5-step process</h2>
@@ -95,7 +95,7 @@ export default function Solutions() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.payments}>
         <div className="container">
