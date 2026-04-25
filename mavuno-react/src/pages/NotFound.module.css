@@ -1,0 +1,22 @@
+.page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  text-align: center;
+}
+.page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.code {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--mint);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.page h1 { font-size: 1.75rem; }
+.page p { color: var(--muted); margin-bottom: 0.5rem; }

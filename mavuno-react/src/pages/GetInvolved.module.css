@@ -1,0 +1,75 @@
+.hero {
+  background: var(--mint-light);
+  border-bottom: 1px solid var(--mint);
+  padding: 5rem 0;
+}
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0.5rem 0 1rem; font-weight: 800; max-width: 640px; }
+.hero p { color: var(--muted); max-width: 560px; font-size: 1.05rem; }
+
+.ways { padding: 5rem 0; }
+.waysGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1.5px solid var(--mint);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.cardHeader { display: flex; align-items: center; gap: 0.75rem; }
+.cardIcon {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--mint-light);
+  border-radius: var(--radius-sm);
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+.card h2 { font-size: 1rem; font-weight: 700; color: var(--primary); }
+.card > p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+
+.points { display: flex; flex-direction: column; gap: 0.6rem; }
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.pointIcon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+.roles { display: flex; flex-direction: column; gap: 0.5rem; }
+.roles h3 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.25rem; }
+.roleTag {
+  font-size: 0.825rem;
+  color: var(--primary);
+  background: var(--mint-light);
+  border: 1px solid var(--mint);
+  border-radius: 100px;
+  padding: 0.35rem 0.85rem;
+  align-self: flex-start;
+}
+
+.truth { background: var(--primary); padding: 5rem 0; }
+.truth h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); color: #fff; margin: 0.5rem 0 2rem; max-width: 560px; }
+.truthGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.truthCard {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.truthCard h3 { font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 0.6rem; }
+.truthCard p { font-size: 0.875rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .waysGrid { grid-template-columns: 1fr; }
+  .truthGrid { grid-template-columns: 1fr; }
+}

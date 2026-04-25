@@ -1,0 +1,87 @@
+.hero {
+  background: var(--primary);
+  padding: 5rem 0;
+  color: #fff;
+}
+.hero .section-label { color: var(--mint); }
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin: 0.5rem 0 1rem; font-weight: 800; max-width: 600px; }
+.hero p { color: rgba(255,255,255,0.75); max-width: 500px; font-size: 1.05rem; line-height: 1.65; }
+
+.work { padding: 5rem 0; }
+.work h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin: 0.5rem 0 2.5rem; }
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.workCard {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1.5px solid var(--mint);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.workCard:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(15,76,42,0.08); }
+.workCard h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.6rem; }
+.workCard p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+
+.growing {
+  background: var(--primary);
+  padding: 5rem 0;
+  color: #fff;
+}
+.growing h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); color: #fff; margin: 0.5rem 0 1.25rem; }
+.growing p {
+  color: rgba(255,255,255,0.75);
+  max-width: 620px;
+  line-height: 1.75;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.growing p:last-child { margin-bottom: 0; }
+
+.measure {
+  background: var(--mint-light);
+  border-top: 1px solid var(--mint);
+  border-bottom: 1px solid var(--mint);
+  padding: 5rem 0;
+}
+.measure h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin: 0.5rem 0 1.25rem; }
+.measure p { color: var(--muted); max-width: 620px; line-height: 1.75; font-size: 1rem; }
+
+.sdg { padding: 5rem 0; }
+.sdg h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin: 0.5rem 0 2rem; }
+.sdgGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.sdgCard {
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--white);
+  border-left: 4px solid var(--sdg-color, var(--primary));
+  border-top: 1.5px solid var(--mint);
+  border-right: 1.5px solid var(--mint);
+  border-bottom: 1.5px solid var(--mint);
+}
+.sdgNum { font-size: 0.7rem; font-weight: 700; color: var(--sdg-color, var(--primary)); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.35rem; }
+.sdgCard h3 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; }
+.sdgCard p { font-size: 0.825rem; color: var(--muted); line-height: 1.5; }
+
+.ctaBanner {
+  background: var(--mint-light);
+  border-top: 1px solid var(--mint);
+  padding: 4rem 0;
+  text-align: center;
+}
+.ctaBanner h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin-bottom: 0.75rem; }
+.ctaBanner p { color: var(--muted); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) {
+  .workGrid { grid-template-columns: 1fr; }
+  .sdgGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .sdgGrid { grid-template-columns: 1fr; }
+}

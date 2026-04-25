@@ -1,0 +1,75 @@
+.hero {
+  background: var(--mint-light);
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--mint);
+}
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0.5rem 0 1rem; max-width: 640px; font-weight: 800; }
+.hero p { color: var(--muted); max-width: 520px; font-size: 1.05rem; }
+
+.services { padding: 5rem 0; }
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1.5px solid var(--mint);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(15,76,42,0.1); }
+.cardIcon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--mint-light);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+.card h3 { font-size: 1.05rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+.card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+.process { background: var(--primary); padding: 5rem 0; }
+.process h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); color: #fff; margin: 0.5rem 0 2.5rem; }
+.steps { display: flex; flex-direction: column; }
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.step:last-child { border-bottom: none; }
+.stepNum {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  background: rgba(200,134,10,0.15);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.step h3 { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem; }
+.step p { font-size: 0.875rem; color: rgba(255,255,255,0.65); }
+
+.payments { padding: 5rem 0; background: var(--bg); }
+.payments h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin: 0.5rem 0 1rem; }
+.payments p { color: var(--muted); max-width: 580px; line-height: 1.75; margin-bottom: 1.75rem; }
+.payBtn { margin-top: 0.25rem; }
+
+.ctaBanner {
+  background: var(--mint-light);
+  border-top: 1px solid var(--mint);
+  padding: 4rem 0;
+  text-align: center;
+}
+.ctaBanner h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin-bottom: 0.75rem; }
+.ctaBanner p { color: var(--muted); margin-bottom: 1.5rem; }
+
+@media (max-width: 720px) {
+  .servicesGrid { grid-template-columns: 1fr; }
+}

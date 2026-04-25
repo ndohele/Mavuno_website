@@ -1,0 +1,98 @@
+.hero {
+  background: var(--primary);
+  padding: 5rem 0;
+  color: #fff;
+}
+.hero .section-label { color: var(--mint); }
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+  margin: 0.5rem 0 1.25rem;
+  font-weight: 800;
+}
+.hero p { font-size: 1.1rem; color: rgba(255,255,255,0.78); max-width: 560px; }
+.hero em { font-style: italic; color: var(--mint); }
+
+.mission { padding: 5rem 0; }
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.missionText h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin: 0.5rem 0 1rem; }
+.missionText p { color: var(--muted); line-height: 1.7; }
+.missionImage {
+  border-radius: var(--radius);
+  min-height: 300px;
+  background: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+}
+
+.story { background: var(--mint-light); padding: 4rem 0; }
+.story h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin: 0.5rem 0 1rem; }
+.story p { color: var(--muted); max-width: 620px; line-height: 1.7; margin-bottom: 1.25rem; }
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.team { padding: 5rem 0; }
+.team h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin: 0.5rem 0 1rem; }
+.teamIntro {
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.photoWrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--mint-light);
+  border: 2px solid var(--mint);
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+.teamCard:hover .photo { transform: scale(1.04); }
+.memberInfo { display: flex; flex-direction: column; gap: 0.2rem; }
+.memberInfo h3 { font-size: 1rem; font-weight: 700; color: var(--primary); }
+.memberInfo span { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+
+.ctaBanner {
+  background: var(--primary);
+  padding: 4rem 0;
+  text-align: center;
+}
+.ctaBanner h2 { color: #fff; font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin-bottom: 0.75rem; }
+.ctaBanner p { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) {
+  .missionGrid { grid-template-columns: 1fr; }
+  .missionImage { min-height: 220px; }
+  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .teamGrid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
