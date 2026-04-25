@@ -27,13 +27,13 @@ const services = [
   },
 ]
 
-const steps = [
-  { n: '01', title: 'Village entry', body: 'Community meeting with local leaders' },
-  { n: '02', title: 'Site assessment', body: 'Field visit to your farm' },
-  { n: '03', title: 'Installation', body: 'System installed, training begins' },
-  { n: '04', title: 'Education', body: 'Structured training sessions in-field' },
-  { n: '05', title: 'Ongoing support', body: 'Monthly visits & maintenance' },
-]
+// const steps = [
+//   { n: '01', title: 'Village entry', body: 'Community meeting with local leaders' },
+//   { n: '02', title: 'Site assessment', body: 'Field visit to your farm' },
+//   { n: '03', title: 'Installation', body: 'System installed, training begins' },
+//   { n: '04', title: 'Education', body: 'Structured training sessions in-field' },
+//   { n: '05', title: 'Ongoing support', body: 'Monthly visits & maintenance' },
+// ]
 
 
 export default function Solutions() {
