@@ -44,7 +44,7 @@ export default function Home() {
         <div className={`container ${styles.heroContent}`}>
           <span className="section-label">Sengerema District · Tanzania</span>
           <h1>Reliable water.<br />Thriving farms.<br />Happy families.</h1>
-          <p>Irrigation · Drainage · Education · Technical Support</p>
+          <p>Irrigation · Drainage · Training · Technical Support</p>
           <div className={styles.heroBtns}>
             <Link to="/solutions" className="btn btn-gold">How we work</Link>
             <Link to="/get-involved" className="btn btn-outline-white">Partner with us</Link>
